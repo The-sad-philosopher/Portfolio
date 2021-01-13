@@ -56,3 +56,13 @@ function scroll_header(this: Window) {
 }
 
 window.addEventListener('scroll', scroll_header);
+
+// *   Show scroll to top btn  * //
+
+function scroll_top(this: Window) {
+  const scroll_top_btn = document.getElementById('scroll-top');
+  if (this.scrollY >= 560) scroll_top_btn?.classList.add('show-scroll');
+  else scroll_top_btn?.classList.remove('show-scroll');
+}
+
+window.addEventListener('scroll', scroll_top);
