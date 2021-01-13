@@ -42,3 +42,25 @@
 
 .show-menu
   top: var(--header-height)
+
+.active-link
+  position: relative
+  
+  &::after
+    content: ''
+    position: absolute
+    bottom: -.7rem
+    left: 0
+    width: 65%
+    height: 3px
+    background-color: var(--primary-light)
+
+.scroll-header
+  background-color: var(--primary-lightest)
+  box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.1)
+
+  .nav__logo, .nav__toggle, .nav__link
+    color: var(--primary-dark)
+
+  .nav__menu
+    background: var(--primary-lightest)
