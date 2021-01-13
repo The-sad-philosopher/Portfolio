@@ -1,5 +1,26 @@
 // *  Normalize  * //
 @use 'normalize'
 
+// *  library  * //
+@use 'library' as *
+
 // *  Base  * //
 @use 'base'
+
+// *  Rules  * //
+
+.section
+  padding: 4rem 0 2rem
+
+  &-title, &-subtitle
+    text-align: center
+
+  &-title
+    font-size: var(--font-h1)
+    color: var(--primary)
+    margin-bottom: var(--mb-3)
+
+  &-subtitle
+    display: block
+    font-size: var(--font-xsm)
+    font-weight: var(--font-w-semibold)
