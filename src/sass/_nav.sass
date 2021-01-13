@@ -1,0 +1,41 @@
+// *  Media Queries  * //
+@use 'include-media' as *
+
+// *  library  * //
+@use 'library' as *
+
+.nav
+  height: var(--header-height)
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  &__menu
+    +media('<tablet')
+      position: fixed
+      top: var(--header-height)
+      left: 0
+      width: 100%
+      padding-top: 1.5rem
+      text-align: center
+      background-color: hsl(0, 0%, 0%)
+      transition: .4s
+      box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.1)
+      border-radius: 0 0 1rem 1rem
+  
+  &__item
+    margin-bottom: var(--mb-3)
+
+  &__link
+    color: var(--primary-lightest)
+    transition: .3s
+
+    &:hover
+      color: var(--primary-light)
+
+  &__logo, &__toggle
+    color: var(--primary-lightest)
+
+  &__toggle
+    font-size: 1.3rem
+    cursor: pointer
