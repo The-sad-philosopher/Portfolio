@@ -1,3 +1,5 @@
+import mixitup from 'mixitup';
+
 // *  toggle menu  * //
 
 const toggle_menu = () => {
@@ -66,3 +68,13 @@ function scroll_top(this: Window) {
 }
 
 window.addEventListener('scroll', scroll_top);
+
+// *  Mix it Up  * //
+const mixer = mixitup('.projects__container', {
+  selectors: {
+    target: '.projects__content',
+  },
+  animation: {
+    duration: 400,
+  },
+});
