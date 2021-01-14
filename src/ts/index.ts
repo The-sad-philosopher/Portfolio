@@ -24,7 +24,7 @@ nav_links.forEach((navlink) =>
   navlink.addEventListener('click', on_navlink_click)
 );
 
-// *  Scroll  * //
+// *  Decorate link on scroll  * //
 
 const sections = document.querySelectorAll<HTMLElement>('section[id]');
 
@@ -35,24 +35,24 @@ const on_window_scroll = () => {
     const section_height = section.offsetHeight;
     const section_top = section.offsetTop - 50;
     const section_id = section.getAttribute('id');
-    const active_section = section.querySelector(
-      `.nav__menu a[href*=${section_id}]`
+    const active_link = document.querySelector(
+      `.nav__menu a[href="#${section_id}"]`
     );
 
     if (scroll_y > section_top && scroll_y <= section_top + section_height)
-      active_section?.classList.add('active-link');
-    else active_section?.classList.remove('active-link');
+      active_link?.classList.add('active-link');
+    else active_link?.classList.remove('active-link');
   });
 };
 
 window.addEventListener('scroll', on_window_scroll);
 
-// *  Change Background Header  * //
+// *  Change header theme  on scroll  * //
 
 function scroll_header(this: Window) {
   const header = document.getElementById('header');
-  if (this.scrollY >= 200) header?.classList.add('scroll-header');
-  else header?.classList.remove('scroll-header');
+  if (this.scrollY >= 200) header?.classList.add('light-theme');
+  else header?.classList.remove('light-theme');
 }
 
 window.addEventListener('scroll', scroll_header);
