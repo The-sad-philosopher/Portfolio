@@ -70,6 +70,7 @@ function scroll_top(this: Window) {
 window.addEventListener('scroll', scroll_top);
 
 // *  Mix it Up  * //
+
 const mixer = mixitup('.projects__container', {
   selectors: {
     target: '.projects__content',
@@ -78,3 +79,20 @@ const mixer = mixitup('.projects__container', {
     duration: 400,
   },
 });
+
+// *  Set active project category * //
+
+const projectCategories = document.querySelectorAll('.projects__item');
+
+function setActiveProjectCategory(this: HTMLElement) {
+  if (projectCategories) {
+    projectCategories.forEach((projectCategory) =>
+      projectCategory.classList.remove('active-project-category')
+    );
+    this.classList.add('active-project-category');
+  }
+}
+
+projectCategories.forEach((projectCategory) =>
+  projectCategory.addEventListener('click', setActiveProjectCategory)
+);
