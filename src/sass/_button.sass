@@ -4,13 +4,19 @@
   display: inline-block
   background-color: var(--primary)
   color: var(--primary-lightest)
-  padding: 0.75rem 1rem
-  border-radius: .25rem
+  padding: 0.5rem 1rem
+  border-radius: .2rem
   transition: ease-in .3s
 
   &:hover
     background: var(--primary-dark)
+  
+.button-white
+  background-color: var(--primary-lightest)
+  color: var(--primary-dark)
+  box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.3)
 
-  .button-light
-    background-color: var(--primary-lightest)
-    
+  &:hover
+    background-color: #e6e6e6
+    transform: translateY(-.1rem)
+    box-shadow: 0 6px 8px hsla(0, 0%, 0%, 0.4)
