@@ -1,0 +1,55 @@
+// *  Library  * //
+@use 'library' as *
+
+.home
+  background-color: hsl(0, 0%, 0%)
+  overflow: hidden
+  
+  &__container
+    position: relative
+    height: calc(100vh - var(--header-height))
+    grid-template-rows: repeat(2, max-content)
+    align-content: space-around
+    row-gap: 2rem
+
+  &__intro
+    border-left: 4px solid var(--primary-lightest)
+    color: var(--primary-lightest)
+    padding-left: 1.5rem
+    z-index: var(--z-tooltip)
+
+  &__name
+    font-size:  var(--font-xlg)
+
+  &__greeting, &__profession
+    display: block
+    font-weight: var(--font-w-bold)
+
+  &__greeting
+    font-size: var(--font-sm)
+    
+  &__profession
+    font-size: var(--font-md)
+    margin-bottom: var(--mb-3)
+
+  &__img
+    position: absolute
+    right: 0
+    bottom: 0
+
+  &__img img
+    width: 240px
+
+  &__social
+    display: flex
+    flex-direction: column
+
+  &__social-icon
+    width: max-content
+    font-size: 1.3rem
+    margin-bottom: var(--mb-2)
+    color: var(--primary-lightest)
+    transition: ease-in .3s
+
+    &:hover
+      color: var(--primary-light)
