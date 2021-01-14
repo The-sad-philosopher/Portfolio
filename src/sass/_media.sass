@@ -1,0 +1,10 @@
+@use 'include-media' as *
+
++media('>=570px')
+  .home__img img
+    width: 330px
+
+  .about__container, 
+  .services__container,
+  .projects__container
+    grid-template-columns: repeat(2, 1fr)
