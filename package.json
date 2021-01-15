@@ -10,7 +10,9 @@
     "start": "parcel src/index.html",
     "build-prod": "parcel build src/index.html"
   },
-  "dependencies": {},
+  "dependencies": {
+    "gsap": "^3.6.0"
+  },
   "devDependencies": {
     "mixitup": "^3.3.1",
     "parcel-bundler": "^1.12.4",
