@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { NavLink } from 'react-router-dom';
 import { NavItems } from './';
+import { Logo } from './Logo';
 import { SocialIcons } from './SocialIcons';
 
 interface NavbarProps {}
@@ -8,12 +8,8 @@ interface NavbarProps {}
 export const Navbar: React.FC<NavbarProps> = () => {
   return (
     <header className="z-50">
-      <nav className="flex flex-col justify-between items-center bg-black h-screen w-20 text-gray-400">
-        <NavLink
-          to="/"
-          exact
-          className="brand_logo bg-gray-800 w-12 h-12 mt-12 rounded-2xl"
-        ></NavLink>
+      <nav className="flex flex-col justify-between items-center h-screen w-20 text-gray-400 bg-gradient-to-bl from-gray-900 to-black rounded-tr-md rounded-br-md">
+        <Logo />
         <NavItems />
         <SocialIcons />
       </nav>
