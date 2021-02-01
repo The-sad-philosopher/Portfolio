@@ -12,7 +12,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
         <NavLink
           to="/"
           exact
-          className="brand_logo bg-gray-600 w-12 h-12 mt-12 rounded-2xl"
+          className="brand_logo bg-gray-800 w-12 h-12 mt-12 rounded-2xl"
         ></NavLink>
         <NavItems />
         <SocialIcons />

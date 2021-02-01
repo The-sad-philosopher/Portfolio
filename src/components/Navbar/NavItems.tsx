@@ -6,17 +6,17 @@ import { NavLink } from 'react-router-dom';
 
 export const NavItems: React.FC = () => {
   return (
-    <div className="nav_links flex flex-col space-y-12 text-2xl">
-      <NavLink to="/" exact>
+    <div className="flex flex-col space-y-12 text-2xl">
+      <NavLink to="/" exact activeClassName="text-red-500">
         <AiOutlineHome className="hover:text-red-400 duration-100" />
       </NavLink>
-      <NavLink to="/project">
+      <NavLink to="/project" activeClassName="text-red-500">
         <AiOutlineCode className="hover:text-red-400 duration-100" />
       </NavLink>
-      <NavLink to="/post">
+      <NavLink to="/post" activeClassName="text-red-500">
         <FiBook className="hover:text-red-400 duration-100" />
       </NavLink>
-      <NavLink to="/about">
+      <NavLink to="/about" activeClassName="text-red-500">
         <IoPersonCircleOutline className="hover:text-red-400 duration-100" />
       </NavLink>
     </div>
