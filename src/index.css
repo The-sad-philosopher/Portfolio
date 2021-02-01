@@ -5,6 +5,7 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
 
 body {
   font-family: 'Exo 2', Helvetica, sans-serif;
