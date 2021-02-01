@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { NavLink } from 'react-router-dom';
 import { FaTwitter, FaGithub, FaDribbble } from 'react-icons/fa';
 
 interface SocialIconsProps {}
@@ -7,15 +6,15 @@ interface SocialIconsProps {}
 export const SocialIcons: React.FC<SocialIconsProps> = () => {
   return (
     <div className="social flex flex-col space-y-8 mb-12 text-lg">
-      <NavLink to="">
+      <a href="https://twitter.com" target="_tab">
         <FaTwitter />
-      </NavLink>
-      <NavLink to="">
+      </a>
+      <a href="https://github.com/The-sad-philosopher" target="_tab">
         <FaGithub />
-      </NavLink>
-      <NavLink to="">
+      </a>
+      <a href="https://dribbble.com" target="_tab">
         <FaDribbble />
-      </NavLink>
+      </a>
     </div>
   );
 };
