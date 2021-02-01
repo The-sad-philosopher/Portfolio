@@ -5,7 +5,7 @@ import { Navbar, Home, About, Project, SinglePost, Post } from './';
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <div className="flex flex-row h-screen">
+      <div className="flex flex-row h-screen bg-gray-800">
         <Navbar />
         <div className="flex-1">
           <Switch>
