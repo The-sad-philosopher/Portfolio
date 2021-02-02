@@ -1,12 +1,12 @@
 import * as React from 'react';
 
 const styles = {
-  letterSpacing: '7px',
+  letterSpacing: '42.5%',
 };
 
 export const Subtitle: React.FC = () => (
   <div
-    className="text-xs font-medium text-gray-400 uppercase tracking-widest"
+    className="text-xs font-medium text-gray-200 uppercase tracking-widest"
     style={styles}
   >
     <span className="font-semibold text-pink-600">&lt;</span> Developer{' '}
