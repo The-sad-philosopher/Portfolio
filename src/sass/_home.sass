@@ -1,5 +1,11 @@
 @use 'library' as *
 
+%html-tags
+  position: absolute
+  font-family: ('la belle aurore', cursive)
+  font-size: var(--font-h2)
+  color: #8c8c8c
+
 .home
   background-color: hsl(0, 0%, 0%)
   overflow: hidden
@@ -16,7 +22,20 @@
     color: var(--primary-lightest)
     padding-left: 1.5rem
     z-index: var(--z-tooltip)
+    position: relative
 
+    &::before
+      @extend %html-tags
+      content: '<div>'
+      top: -35px
+      left: -10px
+   
+    &::after
+      @extend %html-tags
+      content: '</div>'
+      bottom: -30px
+      left: 10px
+  
   &__name
     font-size:  calc(var(--font-xlg) - .3rem)
 
@@ -52,3 +71,13 @@
 
     &:hover
       color: var(--primary-light)
+
+.bg-cube
+  position: absolute
+  z-index: var(--z-normal)
+  top: 9rem
+  left: 19.5rem
+  width: 10.2rem
+  height: 10rem
+  opacity: .7
+  background: url('../img/bg-cube.png') center center
