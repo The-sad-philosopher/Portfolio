@@ -18,7 +18,7 @@
     z-index: var(--z-tooltip)
 
   &__name
-    font-size:  var(--font-xlg)
+    font-size:  calc(var(--font-xlg) - .3rem)
 
   &__greeting, &__profession
     display: block
@@ -33,11 +33,11 @@
 
   &__img
     position: absolute
-    right: 0
-    bottom: 0
+    right: -90px
+    bottom: 80px
 
   &__img img
-    width: 240px
+    width: 360px
 
   &__social
     display: flex
